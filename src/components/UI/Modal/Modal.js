@@ -7,7 +7,7 @@ if (!show) {
 
  return (
     <div className="backDrop" onClick={onClose}>
-        <div className="cartModal" onClick={(event) => event.stopPropagation()}>{children}</div>
+        <div className="cartModal" onClick={(event) => event.stopPropagation(  )}>{children}</div>
     </div>
  )
 }

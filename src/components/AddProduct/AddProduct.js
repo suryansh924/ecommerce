@@ -1,16 +1,23 @@
 import {useRef} from "react";
+import { useState } from "react";
 import Modal from "../UI/Modal/Modal";
 import "./AddProduct.css";
 
 
 
-function AddProduct({showAddProduct , closeAddProduct, onAddProduct}) {
-    const nameRef = useRef(null);
+function AddProduct({showAddProduct ,closeAddProduct, onAddProduct}) {
+    // const nameRef = useRef(null);
+
+    const [productName, setProductName] = useState("");
+
+    const handleProductNameChange = (event) => {
+        setProductName(event.target.value);
+    }
 
     const handleSubmit = (event) => {
     event.preventDefault();
-    const nameValue = nameRef.current.value;
-    onAddProduct(nameValue);
+    // const nameValue = nameRef.current.value;
+    onAddProduct(productName);
 
 }
 
@@ -22,12 +29,12 @@ function AddProduct({showAddProduct , closeAddProduct, onAddProduct}) {
           Enter Product Name
         </label>
         <input
-          ref={nameRef}
+          // ref={nameRef}
           type="text"
           id="productName"
           name="productName"
-        //   value={}
-        //   onChange={handleProductNameChange}
+          value={productName}
+          onChange={handleProductNameChange}
           className="form-input"
         />
         <button type="submit" className="submit-button yellow-btn">
