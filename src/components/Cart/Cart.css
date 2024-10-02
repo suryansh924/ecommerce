@@ -1,0 +1,107 @@
+.cart-container {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px; /* Slightly increased padding for better spacing */
+  background-color: #f8f8f8; /* Light background to separate the cart from other sections */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item {
+  display: flex;
+  margin-bottom: 20px;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #fff; /* White background for each cart item */
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item img {
+  margin-right: 20px;
+  width: 80px; /* Adjusted for consistent sizing */
+  height: auto;
+  object-fit: contain;
+  border: 2px solid var(--dark);
+  border-radius: 5px;
+}
+
+.cart-item-info {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quantity-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-item-quantity {
+  padding: 4px 8px;
+  font-size: 1rem;
+}
+
+.plus-btn, .minus-btn {
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  background-color: #3498db; /* Blue button background */
+  color: white;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.plus-btn:hover, .minus-btn:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+  cursor: pointer;
+  transform: translateY(-2px); /* Lift effect */
+}
+
+.plus-btn:active, .minus-btn:active {
+  background-color: #1e6f99; /* Even darker blue for active state */
+  transform: translateY(1px); /* Pressed effect */
+}
+
+.black-btn {
+  background-color: #3498db; /* Matches the blue of the header and buttons */
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  margin: 0 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.black-btn:hover {
+  cursor: pointer;
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+.black-btn:active {
+  background-color: #1e6f99;
+  transform: translateY(1px);
+}
+
+.cart-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; /* Ensures buttons stretch the full width */
+  padding-top: 20px;
+}
+
+.cart-empty {
+  font-size: large;
+  margin-bottom: 20px;
+  text-align: center;
+  color: var(--dark); /* Ensure the text is consistent with the dark theme */
+}
